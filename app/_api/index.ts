@@ -1,5 +1,6 @@
 import type {
     Fact,
+    Facts,
     ResponseData
 } from "./types";
 
@@ -19,8 +20,7 @@ const getBaseOptions = () => ({
 const getEntities = (url: string) =>
     fetch(joinApiUrl(url)).then((r) => r.json());
 
-export const getFactChecks = (): Promise<Fact[]> =>
-    getEntities("api/fact-checks?populate=*").then((d: ResponseData) => {
-        console.log(d)
+export const getFactChecks = (): Promise<any> =>
+    getEntities("api/fact-checks?populate=*").then((d: any) => {
         return d.data
     });

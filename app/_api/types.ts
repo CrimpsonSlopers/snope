@@ -18,43 +18,30 @@ type ImageAttributes = {
     caption: string | null;
     width: number;
     height: number;
-    formats: {
-        thumbnail: ImageFormat;
-        small: ImageFormat;
-    };
-    hash: string;
-    ext: string;
-    mime: string;
-    size: number;
     url: string;
-    previewUrl: string | null;
-    provider: string;
-    provider_metadata: any; // You might want to define this type if available
-    createdAt: string;
-    updatedAt: string;
 }
 
-export type Fact = {
+export interface Fact {
     id: number;
     attributes: {
         title: string;
         claimSource: string;
         rating: boolean;
         checkedBy: string;
-        createdAt: string;
-        updatedAt: string;
-        publishedAt: string;
         shortContent: string;
         image: {
             data: {
+                id: number;
                 attributes: ImageAttributes;
             };
         };
     };
 }
 
+export type Facts = Fact[];
+
 export interface ResponseData {
-    data: Fact[];
+    data: Facts;
     meta: {
         page: number;
         pageSize: number;
