@@ -20,4 +20,7 @@ const getEntities = (url: string) =>
     fetch(joinApiUrl(url)).then((r) => r.json());
 
 export const getFactChecks = (): Promise<Fact[]> =>
-    getEntities("api/fact-checks?populate=*").then((d: ResponseData) => d.data);
+    getEntities("api/fact-checks?populate=*").then((d: ResponseData) => {
+        console.log(d)
+        return d.data
+    });

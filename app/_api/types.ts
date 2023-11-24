@@ -1,5 +1,5 @@
 
-interface ImageFormat {
+type ImageFormat = {
     name: string;
     hash: string;
     ext: string;
@@ -11,7 +11,7 @@ interface ImageFormat {
     url: string;
 }
 
-interface ImageAttributes {
+type ImageAttributes = {
     id: number;
     name: string;
     alternativeText: string | null;
