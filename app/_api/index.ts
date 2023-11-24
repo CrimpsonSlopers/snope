@@ -1,6 +1,6 @@
 import type {
-    FactCheck,
-    FetchFactChecks
+    Fact,
+    ResponseData
 } from "./types";
 
 const STRAPI_URL = process.env.API_URL;
@@ -19,5 +19,5 @@ const getBaseOptions = () => ({
 const getEntities = (url: string) =>
     fetch(joinApiUrl(url)).then((r) => r.json());
 
-export const getFactChecks = (): Promise<FactCheck[]> =>
-    getEntities("api/fact-checks?populate=*").then((d: FetchFactChecks) => d.data);
+export const getFactChecks = (): Promise<Fact[]> =>
+    getEntities("api/fact-checks?populate=*").then((d: ResponseData) => d.data);
