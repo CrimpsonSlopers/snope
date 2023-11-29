@@ -12,7 +12,7 @@ export default function Home() {
     const [facts, setFacts] = useState<Fact[]>([])
 
     useEffect(() => {
-        fetch("http://localhost:1337/api/fact-checks?populate=*")
+        fetch("http://18.117.246.255:1337/api/fact-checks?populate=*")
             .then((resp) => resp.json())
             .then((d) => setFacts(d.data))
     }, [])
@@ -27,7 +27,7 @@ export default function Home() {
                 const pfpUrl = getStrapiMedia(contentImage.url);
 
                 return (
-                    <div key={index} className="max-w-lg mx-auto rounded-3xl overflow-hidden lg:max-w-4xl border border-gray-300 p-2 hover:bg-white duration-300 hover:cursor-pointer">
+                    <div key={index} className="max-w-lg mx-auto rounded-3xl overflow-hidden lg:max-w-4xl border border-gray-300 p-2 hover:bg-white duration-300">
                         <div className="lg:flex">
                             <div className="lg:shrink-0">
                                 <img className="h-48 w-full object-cover lg:h-full lg:w-48 rounded-2xl aspect-square" src={pfpUrl} />
