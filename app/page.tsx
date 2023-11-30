@@ -12,7 +12,7 @@ export default function Home() {
     const [facts, setFacts] = useState<Fact[]>([])
 
     useEffect(() => {
-        fetch("http://18.117.246.255:1337/api/fact-checks?populate=*")
+        fetch("https://www.atrioc.online/api/fact-checks?populate=*")
             .then((resp) => resp.json())
             .then((d) => setFacts(d.data))
     }, [])
