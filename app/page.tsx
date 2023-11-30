@@ -20,14 +20,14 @@ export default function Home() {
     return (
         <main className="w-screen flex min-h-screen flex-col items-center justify-start p-8 gap-4 bg-[#F1F1F1]">
             <div className="justify-center items-center gap-2.5 inline-flex mb-8">
-                <img className="w-auto h-40" src="/Brand.png" alt="Atriopes" />
+                <img className="w-auto h-28 lg:h-40" src="/Brand.png" alt="Atriopes" />
             </div>
             {facts.map((item, index) => {
                 const contentImage = item.attributes.image.data.attributes;
                 const pfpUrl = 'https://atrioc.online' + contentImage.url;
 
                 return (
-                    <div key={index} className="max-w-lg mx-auto rounded-3xl overflow-hidden lg:max-w-4xl border border-gray-300 p-2 hover:bg-white duration-300">
+                    <div key={index} className="max-w-full mx-auto rounded-3xl overflow-hidden lg:max-w-4xl border border-gray-300 p-2 hover:bg-white duration-300">
                         <div className="lg:flex">
                             <div className="lg:shrink-0">
                                 <img className="h-48 w-full object-cover lg:h-full lg:w-48 rounded-2xl aspect-square" src={pfpUrl} />
