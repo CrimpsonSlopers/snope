@@ -24,7 +24,7 @@ export default function Home() {
             </div>
             {facts.map((item, index) => {
                 const contentImage = item.attributes.image.data.attributes;
-                const pfpUrl = getStrapiMedia(contentImage.url);
+                const pfpUrl = 'https://atrioc.online' + contentImage.url;
 
                 return (
                     <div key={index} className="max-w-lg mx-auto rounded-3xl overflow-hidden lg:max-w-4xl border border-gray-300 p-2 hover:bg-white duration-300">
