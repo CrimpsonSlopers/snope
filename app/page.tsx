@@ -18,7 +18,7 @@ export default function Home() {
     }, [])
 
     return (
-        <main className="w-full flex min-h-screen flex-col items-center justify-start p-8 gap-4 bg-[#F1F1F1]">
+        <main className="w-screen flex min-h-screen flex-col items-center justify-start p-8 gap-4 bg-[#F1F1F1]">
             <div className="justify-center items-center gap-2.5 inline-flex mb-8">
                 <img className="w-auto h-40" src="/Brand.png" alt="Atriopes" />
             </div>
