@@ -29,6 +29,7 @@ export interface Fact {
         rating: boolean;
         checkedBy: string;
         shortContent: string;
+        article: string;
         image: {
             data: {
                 id: number;
